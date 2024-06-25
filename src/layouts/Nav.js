@@ -25,25 +25,25 @@ export const Nav = (element) => {
 
   element.innerHTML = `
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">${appName}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            ${links
-              .map(
-                (link) => `
-                <li class="nav-item">
-                  <a class="nav-link" href="${link.href}">${link.text}</a>
-                </li>`
-              )
-              .join("")}
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">${appName}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        ${links
+          .map(
+            (link) => `
+            <li class="nav-item">
+              <a class="nav-link" href="${link.href}">${link.text}</a>
+            </li>`
+          )
+          .join("")}
+      </ul>
+    </div>
+  </div>
+</nav>
     `;
 
   // Remplace les liens par des événements de navigation
