@@ -18,8 +18,8 @@ export const Nav = (element) => {
    */
   const links = [
     { href: "/", text: "Accueil" },
-    { href: "/contact", text: "Contact" },
     { href: "/produits", text: "Produits" },
+    { href: "/contact", text: "Contact" },
     { href: "/panier", text: "Panier" },
   ];
 
