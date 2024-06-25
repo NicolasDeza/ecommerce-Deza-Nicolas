@@ -1,8 +1,15 @@
 @import "bootstrap/scss/bootstrap";
 
-// Page d'accueil
+/* Home */
 .Accueil {
   text-align: center;
+}
+.carousel-item img {
+  height: 500px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover;
+}
+#homeCarousel {
+  width: 100%;
 }
 
 // Présentation produit

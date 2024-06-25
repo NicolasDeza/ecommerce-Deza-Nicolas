@@ -9,6 +9,7 @@ export const Layout = () => {
       <header>
       </header>
       <main class="container mt-5">
+    
       </main>
       <footer class="text-center mt-auto">
         <p>&copy; ${year} - Tous droits réservés</p>
