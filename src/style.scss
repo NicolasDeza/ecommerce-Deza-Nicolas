@@ -1,0 +1,45 @@
+@import "bootstrap/scss/bootstrap";
+
+// Page d'accueil
+.Accueil {
+  text-align: center;
+}
+
+// Présentation produit
+#affiche {
+  width: 65%;
+}
+
+.presentation {
+  text-align: center;
+}
+
+// ProduitCard
+
+.prix {
+  font-weight: bold;
+}
+.carte {
+  text-align: center;
+}
+
+// ProduitRow
+
+.rowcarte {
+  text-align: justify;
+}
+
+// Panier
+
+.Panier {
+  text-align: justify;
+}
+
+#Total {
+  text-align: center;
+  font-weight: bold;
+}
+
+#Total span {
+  color: red;
+}

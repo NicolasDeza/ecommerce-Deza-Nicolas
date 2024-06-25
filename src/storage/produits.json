@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "Luminous Wall Clock",
+    "photo": "./img/lumious.webp",
+    "description": "A stylish wall clock that glows in the dark, perfect for modern interiors.",
+    "categorie": "HomeDecor",
+    "prix": "45"
+  },
+  {
+    "id": 2,
+    "name": "Eco-Friendly Bamboo Toothbrush",
+    "photo": "./img/bamboo.webp",
+    "description": "Sustainable and biodegradable toothbrush made from bamboo. Gentle on teeth and the environment.",
+    "categorie": "PersonalCare",
+    "prix": "5"
+  },
+  {
+    "id": 3,
+    "name": "Smart Water Bottle",
+    "photo": "./img/waterBottle.webp",
+    "description": "A water bottle with a built-in smart sensor that tracks your hydration levels.",
+    "categorie": "Fitness",
+    "prix": "35"
+  },
+  {
+    "id": 4,
+    "name": "Wireless Charging Pad",
+    "photo": "./img/wireless.webp",
+    "description": "Convenient wireless charging pad for all your devices. Fast and efficient.",
+    "categorie": "Electronics",
+    "prix": "25"
+  },
+  {
+    "id": 5,
+    "name": "Noise Cancelling Headphones",
+    "photo": "./img/headphone.webp",
+    "description": "High-quality headphones that cancel out external noise for a superior audio experience.",
+    "categorie": "Electronics",
+    "prix": "120"
+  },
+  {
+    "id": 6,
+    "name": "Organic Cotton T-Shirt",
+    "photo": "./img/cotton.webp",
+    "description": "Comfortable and breathable t-shirt made from 100% organic cotton.",
+    "categorie": "Clothing",
+    "prix": "20"
+  },
+  {
+    "id": 7,
+    "name": "Ergonomic Office Chair",
+    "photo": "./img/chairOffice.webp",
+    "description": "Supportive and comfortable office chair designed to improve posture.",
+    "categorie": "Furniture",
+    "prix": "200"
+  },
+  {
+    "id": 8,
+    "name": "Smart Home Hub",
+    "photo": "./img/smartHub.webp",
+    "description": "Control all your smart home devices from one central hub. Easy to set up and use.",
+    "categorie": "Electronics",
+    "prix": "75"
+  },
+  {
+    "id": 9,
+    "name": "Portable Solar Charger",
+    "photo": "./img/chargerSolar.webp",
+    "description": "Charge your devices on the go with this eco-friendly solar charger.",
+    "categorie": "Outdoors",
+    "prix": "40"
+  },
+  {
+    "id": 10,
+    "name": "Reusable Silicone Food Bags",
+    "photo": "./img/foodBags.webp",
+    "description": "Durable and reusable food storage bags made from silicone. Great for the environment.",
+    "categorie": "Kitchen",
+    "prix": "15"
+  },
+  {
+    "id": 11,
+    "name": "Bluetooth Speaker",
+    "photo": "./img/speaker.webp",
+    "description": "Portable Bluetooth speaker with excellent sound quality and long battery life.",
+    "categorie": "Electronics",
+    "prix": "55"
+  },
+  {
+    "id": 12,
+    "name": "Adjustable Dumbbells",
+    "photo": "./img/dumbbels.webp",
+    "description": "Versatile dumbbells that can be adjusted to different weights for a complete workout.",
+    "categorie": "Fitness",
+    "prix": "85"
+  },
+  {
+    "id": 13,
+    "name": "Digital Kitchen Scale",
+    "photo": "./img/scaleDigital.webp",
+    "description": "Precise digital scale for all your cooking and baking needs.",
+    "categorie": "Kitchen",
+    "prix": "30"
+  },
+  {
+    "id": 14,
+    "name": "LED Desk Lamp",
+    "photo": "./img/ledLamp.webp",
+    "description": "Energy-efficient LED desk lamp with adjustable brightness levels.",
+    "categorie": "HomeDecor",
+    "prix": "25"
+  },
+  {
+    "id": 15,
+    "name": "Electric Wine Opener",
+    "photo": "./img/wineOpener.webp",
+    "description": "Effortlessly open wine bottles with this sleek electric wine opener.",
+    "categorie": "Kitchen",
+    "prix": "35"
+  },
+  {
+    "id": 16,
+    "name": "Memory Foam Pillow",
+    "photo": "./img/memoryFoam.webp",
+    "description": "Comfortable pillow made from memory foam to provide the perfect night's sleep.",
+    "categorie": "HomeDecor",
+    "prix": "45"
+  },
+  {
+    "id": 17,
+    "name": "Stainless Steel Water Bottle",
+    "photo": "./img/steelWaterBottle.webp",
+    "description": "Durable and stylish water bottle made from stainless steel. Keeps drinks hot or cold for hours.",
+    "categorie": "Outdoors",
+    "prix": "20"
+  },
+  {
+    "id": 18,
+    "name": "Cordless Vacuum Cleaner",
+    "photo": "./img/vacuumCleaner.webp",
+    "description": "Lightweight and powerful cordless vacuum cleaner for easy cleaning.",
+    "categorie": "HomeAppliances",
+    "prix": "150"
+  },
+  {
+    "id": 19,
+    "name": "Yoga Mat",
+    "photo": "./img/yoga.webp",
+    "description": "Non-slip yoga mat made from eco-friendly materials. Perfect for all types of yoga.",
+    "categorie": "Fitness",
+    "prix": "25"
+  },
+  {
+    "id": 20,
+    "name": "Gaming Mouse",
+    "photo": "./img/gamingMouse.webp",
+    "description": "High-precision gaming mouse with customizable buttons and RGB lighting.",
+    "categorie": "Electronics",
+    "prix": "60"
+  },
+  {
+    "id": 21,
+    "name": "Smart Thermostat",
+    "photo": "./img/thermostat.webp",
+    "description": "Save energy and control your home's temperature remotely with this smart thermostat.",
+    "categorie": "Electronics",
+    "prix": "130"
+  }
+]
