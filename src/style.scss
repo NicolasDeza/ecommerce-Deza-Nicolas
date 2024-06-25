@@ -1,15 +1,5 @@
 @import "bootstrap/scss/bootstrap";
-body {
-  background-image: url("/background.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Optionnel, selon vos préférences */
-  font-family: Arial, sans-serif; /* Exemple de police de caractères pour le corps du texte */
-  margin: 0;
-  padding: 0;
-  color: #333; /* Couleur du texte */
-}
+
 /* Home */
 .Accueil {
   text-align: center;
