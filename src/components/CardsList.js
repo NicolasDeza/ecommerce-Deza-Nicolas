@@ -8,10 +8,9 @@ import { TextInput } from "./TextInput";
  * @param {HTMLElement} element
  * @param {Object[]} items
  * @param {Function} itemTemplate
- * @param {string[]} searchableFields
  * @returns {void}
  */
-export const CardsList = (element, items, itemTemplate, searchableFields) => {
+export const CardsList = (element, items, itemTemplate) => {
   // On récupère le numéro de page et la valeur du champ de recherche dans l'URL
   let currentPage =
     parseInt(new URL(window.location).searchParams.get("page")) || 1;
@@ -27,13 +26,18 @@ export const CardsList = (element, items, itemTemplate, searchableFields) => {
   element.innerHTML = `
     <div class="row">
       <div class="col mb-2">
-        ${TextInput("search", searchInputValue, "search", "Rechercher...")}
+        ${TextInput(
+          "search",
+          searchInputValue,
+          "search",
+          "Rechercher par catégorie..."
+        )}
       </div>
     </div>
     <div id="${id}" class="row row-cols-2 row-cols-lg-3">
     </div>
     <div id="pagination"></div>
-    `;
+  `;
 
   const searchInput = element.querySelector("input#search");
   const listElement = element.querySelector(`#${id}`);
@@ -44,7 +48,7 @@ export const CardsList = (element, items, itemTemplate, searchableFields) => {
     if (filteredItems.length === 0) {
       return `
         <p>Aucun résultat</p>
-        `;
+      `;
     }
 
     // On passe le template de l'item à la fonction map pour générer une liste de cartes
@@ -56,14 +60,10 @@ export const CardsList = (element, items, itemTemplate, searchableFields) => {
   // Fonction pour filtrer et paginer les items
   const filterAndPaginate = (perPage = 12) => {
     const value = searchInputValue.toLowerCase();
-    // On filtre les items en fonction de la valeur du champ de recherche
-    // et des champs de recherche spécifiés
+    // On filtre les items en fonction de la catégorie spécifiée
     if (value !== "") {
-      filteredItems = items.filter(
-        (item) =>
-          searchableFields.filter((field) =>
-            item[field].toLowerCase().includes(value)
-          ).length > 0
+      filteredItems = items.filter((item) =>
+        item.categorie.toLowerCase().includes(value)
       );
     } else {
       filteredItems = items;
