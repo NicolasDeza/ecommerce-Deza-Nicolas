@@ -26,8 +26,11 @@ export const Produit = (element) => {
   // on récupère l'identifiant du Produit depuis l'URL
   const url = new URL(window.location.href);
   const produitId = parseInt(url.searchParams.get("id"));
+  console.log("Produit ID:", produitId);
+
   // on récupère le produit correspondant à l'identifiant
   const produit = Produits.find((produit) => produit.id === produitId);
+  console.log("Produit trouvé:", produit);
 
   // si le produit n'existe pas, on affiche un message d'erreur
   if (
@@ -36,7 +39,7 @@ export const Produit = (element) => {
     produit.photo &&
     produit.description &&
     produit.prix &&
-    produit.catégorie
+    produit.categorie // Utilisez 'categorie' sans accent aigu
   ) {
     element.innerHTML = `
       <h1 class="presentation">${escapeHTML(produit.name)}</h1>
@@ -50,11 +53,11 @@ export const Produit = (element) => {
         produit.prix.toString()
       )} €</p>
       <p class="presentation">${CategorieBadge(
-        escapeHTML(produit.catégorie)
-      )}</p>
+        escapeHTML(produit.categorie)
+      )}</p> <!-- Utilisez 'categorie' sans accent aigu -->
       <p class="presentation"><input id="quantite"  type="number" name="quantity" value="1" min="1" max="10">
       <button id="envoyer" class="btn btn-success presentation">Ajouter au panier</button></p>
-			<div id="messageConfirmation" class="presentation" style="color: red; display: none;"></div>
+      <div id="messageConfirmation" class="presentation" style="color: red; display: none;"></div>
     `;
 
     let baliseQuantite = document.getElementById("quantite");
@@ -87,5 +90,7 @@ export const Produit = (element) => {
         }
       });
     }
+  } else {
+    element.innerHTML = "<p>Produit non trouvé ou informations manquantes.</p>";
   }
 };

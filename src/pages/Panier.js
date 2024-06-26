@@ -1,12 +1,3 @@
-// import { Panier } from "../pages/Produits/Produit.js";
-// import { SupprimerPanier } from "./Produits/Produit.js";
-// import { EnleverProduit } from "./Produits/Produit.js";
-// import { ProduitPanier } from "./Produits/Produit.js";
-
-// Panier();
-
-// ProduitPanier();
-
 function recupPanier() {
   try {
     let panier = JSON.parse(localStorage.getItem("panier")) || [];

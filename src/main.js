@@ -9,11 +9,11 @@ import { Produit } from "./pages/Produits/Produit";
 import { Panier } from "./pages/Panier";
 
 const routes = {
-	"/": Home,
-	"/contact": Contact,
-	"/produit": Produit,
-	"/produits": Produits,
-	"/panier": Panier,
+  "/": Home,
+  "/contact": Contact,
+  "/produit": Produit,
+  "/produits": Produits,
+  "/panier": Panier,
 };
 
 app("#app", routes);
