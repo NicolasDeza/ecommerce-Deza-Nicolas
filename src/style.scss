@@ -10,10 +10,6 @@
   width: 65%;
 }
 
-.presentation {
-  text-align: center;
-}
-
 // ProduitCard
 
 .prix {
@@ -22,12 +18,30 @@
 .carte {
   text-align: center;
 }
-
-// ProduitRow
-
-.rowcarte {
-  text-align: justify;
+.card-link {
+  text-decoration: none;
 }
+
+.card-title {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+
+.card-text.prix {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Footer */
 .custom-footer {
   min-height: 200px;
