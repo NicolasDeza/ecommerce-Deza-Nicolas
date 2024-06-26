@@ -16,24 +16,22 @@ const SupprimerPanier = () => {
   localStorage.removeItem("panier");
 };
 
-const AjouterProduit = (produit) => {
+const AjouterProduit = (produitId) => {
   let panier = JSON.parse(localStorage.getItem("panier")) || [];
-  let produitPanier = panier.find((p) => p.id === produit.id);
+  let produitPanier = panier.find((p) => p.id === produitId);
   if (produitPanier) {
     produitPanier.quantite++;
-  } else {
-    panier.push({ ...produit, quantite: 1 });
   }
   localStorage.setItem("panier", JSON.stringify(panier));
 };
 
-const EnleverProduit = (produit) => {
+const EnleverProduit = (produitId) => {
   let panier = JSON.parse(localStorage.getItem("panier")) || [];
-  let produitPanier = panier.find((p) => p.id === produit.id);
+  let produitPanier = panier.find((p) => p.id === produitId);
   if (produitPanier) {
     produitPanier.quantite--;
     if (produitPanier.quantite === 0) {
-      panier = panier.filter((p) => p.id !== produit.id);
+      panier = panier.filter((p) => p.id !== produitId);
     }
   }
   localStorage.setItem("panier", JSON.stringify(panier));
@@ -62,12 +60,16 @@ export const Panier = (element) => {
           <td class="Panier align-middle">${produit.name}</td>
           <td class="Panier align-middle">${produit.prix} €</td>
           <td class="Panier align-middle">${produit.quantite}</td>
-          <td class="Panier align-middle">${
+          <td class="Panier align-middle">${(
             produit.prix * produit.quantite
-          } €</td>
+          ).toFixed(2)} €</td>
           <td class="Panier align-middle">
-            <button class="btn btn-sm btn-primary ajouterProduit">+</button>
-            <button class="btn btn-sm btn-danger enleverProduit">-</button>
+            <button class="btn btn-sm btn-primary ajouterProduit" data-id="${
+              produit.id
+            }">+</button>
+            <button class="btn btn-sm btn-danger enleverProduit" data-id="${
+              produit.id
+            }">-</button>
           </td>
         </tr>
       `
@@ -81,16 +83,25 @@ export const Panier = (element) => {
   Supprimer le Panier
 </button>
 	`;
+
   document.querySelector("#supprimerPanier").addEventListener("click", () => {
     SupprimerPanier();
     Panier(element); // Permet de mettre automatiquement à jour la page
   });
-  element.querySelector(".ajouterProduit").addEventListener("click", () => {
-    AjouterProduit(produit);
-    ProduitPanier(element, produit);
+
+  document.querySelectorAll(".ajouterProduit").forEach((button) => {
+    button.addEventListener("click", () => {
+      const produitId = parseInt(button.getAttribute("data-id"));
+      AjouterProduit(produitId);
+      Panier(element); // Met à jour la page après modification
+    });
   });
-  element.querySelector(".enleverProduit").addEventListener("click", () => {
-    EnleverProduit(produit);
-    Panier();
+
+  document.querySelectorAll(".enleverProduit").forEach((button) => {
+    button.addEventListener("click", () => {
+      const produitId = parseInt(button.getAttribute("data-id"));
+      EnleverProduit(produitId);
+      Panier(element); // Met à jour la page après modification
+    });
   });
 };
