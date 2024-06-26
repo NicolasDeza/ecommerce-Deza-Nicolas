@@ -46,7 +46,7 @@ export const Produit = (element) => {
       <figure class="presentation">
       <img src="${escapeHTML(
         produit.photo
-      )}" id="affiche" class="card-img-top" alt="${escapeHTML(produit.name)}">
+      )}" id="affichage" class="card-img-top" alt="${escapeHTML(produit.name)}">
       </figure>
       <p class="presentation">${escapeHTML(produit.description)}</p>
       <p id="prix" class="presentation">${escapeHTML(
