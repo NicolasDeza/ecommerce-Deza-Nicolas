@@ -11,30 +11,31 @@ import { TextareaInput } from "../components/TextareaInput";
  */
 export const Contact = (element) => {
   element.innerHTML = `
-        <h1 class="text-center my-4">Contact</h1>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-              <form>
-                <div class="form-group mb-3">
-                  ${InputLabel("name", "Nom")}
-                  ${TextInput("name", "", "text", "Votre nom")}
-                </div>
-                <div class="form-group mb-3">
-                  ${InputLabel("email", "Email")}
-                  ${TextInput("email", "", "email", "Votre email")}
-                </div>
-                <div class="form-group mb-3">
-                  ${InputLabel("message", "Message")}
-                  ${TextareaInput("message", "", "Votre message", 5)}
-                </div>
-                <div class="text-center">
-                  ${PrimaryButton("Envoyer", "submit")}
-                </div>
-              </form>
-            </div>
-          </div>
+       <h1 class="text-center my-4">Contact</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <form class="mb-5">
+        <div class="form-group mb-3">
+          ${InputLabel("name", "Nom")}
+          ${TextInput("name", "", "text", "Votre nom")}
         </div>
+        <div class="form-group mb-3">
+          ${InputLabel("email", "Email")}
+          ${TextInput("email", "", "email", "Votre email")}
+        </div>
+        <div class="form-group mb-3">
+          ${InputLabel("message", "Message")}
+          ${TextareaInput("message", "", "Votre message", 5)}
+        </div>
+        <div class="text-center">
+          ${PrimaryButton("Envoyer", "submit")}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
     `;
 
   const form = element.querySelector("form");

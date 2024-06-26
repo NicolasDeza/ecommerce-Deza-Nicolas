@@ -17,16 +17,16 @@ export const Nav = (element) => {
    * @type {Link[]}
    */
   const links = [
-    { href: "/", text: "Accueil" },
-    { href: "/produits", text: "Produits" },
+    { href: "/", text: "Produits" },
+
     { href: "/contact", text: "Contact" },
     { href: "/panier", text: "Panier" },
   ];
 
   element.innerHTML = `
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">${appName}</a>
+    <a class="navbar-brand fs-1" href="/">${appName}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

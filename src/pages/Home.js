@@ -12,3 +12,6 @@ export const Home = (element) => {
 
   `;
 };
+
+// Page a supprimer
+// import { Home } from "./pages/Home"; ( du fichier main.js)

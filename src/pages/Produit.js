@@ -26,11 +26,9 @@ export const Produit = (element) => {
   // on récupère l'identifiant du Produit depuis l'URL
   const url = new URL(window.location.href);
   const produitId = parseInt(url.searchParams.get("id"));
-  console.log("Produit ID:", produitId);
 
   // on récupère le produit correspondant à l'identifiant
   const produit = Produits.find((produit) => produit.id === produitId);
-  console.log("Produit trouvé:", produit);
 
   // si le produit n'existe pas, on affiche un message d'erreur
   if (
@@ -42,22 +40,36 @@ export const Produit = (element) => {
     produit.categorie // Utilisez 'categorie' sans accent aigu
   ) {
     element.innerHTML = `
-      <h1 class="presentation">${escapeHTML(produit.name)}</h1>
-      <figure class="presentation">
-      <img src="${escapeHTML(
-        produit.photo
-      )}" id="affichage" class="card-img-top" alt="${escapeHTML(produit.name)}">
-      </figure>
-      <p class="presentation">${escapeHTML(produit.description)}</p>
-      <p id="prix" class="presentation">${escapeHTML(
-        produit.prix.toString()
-      )} €</p>
-      <p class="presentation">${CategorieBadge(
-        escapeHTML(produit.categorie)
-      )}</p> <!-- Utilisez 'categorie' sans accent aigu -->
-      <p class="presentation"><input id="quantite"  type="number" name="quantity" value="1" min="1" max="10">
-      <button id="envoyer" class="btn btn-success presentation">Ajouter au panier</button></p>
-      <div id="messageConfirmation" class="presentation" style="color: red; display: none;"></div>
+        <div class="container mt-1 mb-4">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <h1 class="presentation text-center my-4">${escapeHTML(
+              produit.name
+            )}</h1>
+            <figure class="presentation text-center mb-4">
+              <img src="${escapeHTML(
+                produit.photo
+              )}" id="affichage" class="img-fluid" alt="${escapeHTML(
+      produit.name
+    )}">
+            </figure>
+            <p class="presentation text-center mb-4">${escapeHTML(
+              produit.description
+            )}</p>
+            <p id="prix" class="presentation text-center mb-4">${escapeHTML(
+              produit.prix.toString()
+            )} €</p>
+            <p class="presentation text-center mb-4">${CategorieBadge(
+              escapeHTML(produit.categorie)
+            )}</p> <!-- Utilisez 'categorie' sans accent aigu -->
+            <div class="presentation text-center mb-4">
+              <input id="quantite" type="number" name="quantity" value="1" min="1" max="10" class="form-control d-inline w-auto">
+              <button id="envoyer" class="btn btn-success">Ajouter au panier</button>
+            </div>
+            <div id="messageConfirmation" class="presentation text-center mb-5" style="color: red; display: none;"></div>
+          </div>
+        </div>
+      </div>
     `;
 
     let baliseQuantite = document.getElementById("quantite");
