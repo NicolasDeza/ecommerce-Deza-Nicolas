@@ -1,6 +1,6 @@
-import { CardsList } from "../../components/CardsList";
-import { DataTable } from "../../components/DataTable";
-import produits from "../../storage/produits.json";
+import { CardsList } from "../components/CardsList";
+import { DataTable } from "../components/DataTable";
+import produits from "../storage/produits.json";
 import { ProduitCard } from "./Partials/ProduitsCard";
 import { ProduitRow } from "./Partials/ProduitsRow";
 

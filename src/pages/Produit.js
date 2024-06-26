@@ -1,4 +1,4 @@
-import Produits from "../../storage/produits.json";
+import Produits from "../storage/produits.json";
 import { CategorieBadge } from "./Partials/CategorieBadge";
 
 /**
